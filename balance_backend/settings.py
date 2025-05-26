@@ -74,8 +74,12 @@ WSGI_APPLICATION = 'balance_backend.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'BalanceDB',
+        'USER': 'postgres',
+        'PASSWORD': '55209354',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
