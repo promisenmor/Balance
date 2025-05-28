@@ -69,6 +69,10 @@ class SavingGoal(models.Model):
     saved_amount = models.DecimalField(max_digits=12, decimal_places=2, default=0)
     deadline = models.DateField()
 
+    @property
+    def progress(self):
+        return (self.saved_amount / self.target_amount) * 100
+
     def __str__(self):
         return f"{self.title} - {self.user.email}"
     

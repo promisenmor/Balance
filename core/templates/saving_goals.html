@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="px-40 flex flex-1 justify-center py-5">
+  <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+    <div class="flex flex-wrap justify-between gap-3 p-4">
+      <p class="text-white tracking-light text-[32px] font-bold leading-tight min-w-72">My Goals</p>
+      <button
+        class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-8 px-4 bg-[#313e2d] text-white text-sm font-medium leading-normal">
+        <span class="truncate">New Goal</span>
+      </button>
+    </div>
+    <div class="p-4 @container">
+      <div
+        class="flex flex-col items-stretch justify-start rounded-xl @xl:flex-row @xl:items-start shadow-[0_0_4px_rgba(0,0,0,0.1)] bg-[#232c20]">
+        <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl"
+          style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAuhzgvaFp8z5SxEGDW0nSF_4g6tAaEcppuq0KGBYjo7gBQQGQqEzwWyujXRt1pGIHi8GTLa0iea26_tnFcw2MEdDaWHvAQIDixFhcHl_BM2XpjAgSCkB9CrCJ4XURVSumpS1X3OsHTg9r0rXu1hoEdgSdRNUw8URnXxW6pS4LuepeAzTi6tm2us_iALNIWRXVELWadtxvQ3mE993UbK2TOjyahyw7EAX-9DJ9hnZNzXrtjm1VulIDmfR_wyuG_Pdj_CFf4Vyaea7ys");'>
+        </div>
+        <div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-1 py-4 @xl:px-4 px-4">
+          <p class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">Dubai Trip</p>
+          <div class="flex items-end gap-3 justify-between">
+            <div class="flex flex-col gap-1">
+              <p class="text-[#a7baa0] text-base font-normal leading-normal">Progress: 60%</p>
+              <p class="text-[#a7baa0] text-base font-normal leading-normal">Target: NGN 500,000</p>
+            </div>
+            <button
+              class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-8 px-4 bg-[#c1e0b7] text-[#171e15] text-sm font-medium leading-normal">
+              <span class="truncate">Manage</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="p-4 @container">
+      <div
+        class="flex flex-col items-stretch justify-start rounded-xl @xl:flex-row @xl:items-start shadow-[0_0_4px_rgba(0,0,0,0.1)] bg-[#232c20]">
+        <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl"
+          style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCCMzf91lnpuuFOy1wdBRkWpQE7ko-X3WMDh9kbxzQZ9gX7fcf9c24ebMPam0EMJV0LXOd9EjSZfoZdzymgn2Jjf_xkZzlq1d-oLsKOurwp0M78FJDClbtKI_Q8YIWcoPVURxiaGFF5CRwKSqyQ3jvYlH6Di_mUHz0zQ07muYtH2Nu8Gp0AQtjVU-0IQjmCfKFKoykFJkPrds8rBZZdCqWLR3VqxR9HW9SZXHNZZWfnAEjNaKFJ1j88s4_mK-TcimsY9P9A4MW8dsuv");'>
+        </div>
+        <div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-1 py-4 @xl:px-4 px-4">
+          <p class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">New Phone</p>
+          <div class="flex items-end gap-3 justify-between">
+            <div class="flex flex-col gap-1">
+              <p class="text-[#a7baa0] text-base font-normal leading-normal">Progress: 30%</p>
+              <p class="text-[#a7baa0] text-base font-normal leading-normal">Target: NGN 150,000</p>
+            </div>
+            <button
+              class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-8 px-4 bg-[#c1e0b7] text-[#171e15] text-sm font-medium leading-normal">
+              <span class="truncate">Manage</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="p-4 @container">
+      <div
+        class="flex flex-col items-stretch justify-start rounded-xl @xl:flex-row @xl:items-start shadow-[0_0_4px_rgba(0,0,0,0.1)] bg-[#232c20]">
+        <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl"
+          style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCcBqrv7oW_cYut-4lxnxHiB-tDTAAh8Yy9RjeLvqqCcg-9IwGwKK1oFQELzx0lw2EhEEKweTSRv5MFChZ8raiqHe4yjan6PNeVSv9G-uJj12iRU5OoM7QKTegVJzJ3odiz65_GpSRnsQoRuLGI0inXgJv7FgR9TGJ6L5RYOeyxrCNM55elvYXTNBHiH2R_eUmJQqwdcfbtUOigDLxTffB-KFVji4d6y3M8f9jtig13NCLQ3PwWDB0_rRYoysQa31I1lJJ8XjClBI3r");'>
+        </div>
+        <div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-1 py-4 @xl:px-4 px-4">
+          <p class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">Rent</p>
+          <div class="flex items-end gap-3 justify-between">
+            <div class="flex flex-col gap-1">
+              <p class="text-[#a7baa0] text-base font-normal leading-normal">Progress: 80%</p>
+              <p class="text-[#a7baa0] text-base font-normal leading-normal">Target: NGN 200,000</p>
+            </div>
+            <button
+              class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-8 px-4 bg-[#c1e0b7] text-[#171e15] text-sm font-medium leading-normal">
+              <span class="truncate">Manage</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

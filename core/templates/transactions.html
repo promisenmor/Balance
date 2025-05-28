@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="px-40 flex flex-1 justify-center py-5">
+  <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+    <div class="flex flex-wrap justify-between gap-3 p-4">
+      <p class="text-white tracking-light text-[32px] font-bold leading-tight min-w-72">Add Transaction</p>
+    </div>
+    <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+      <label class="flex flex-col min-w-40 flex-1">
+        <select
+          class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-white focus:outline-0 focus:ring-0 border-none bg-[#313e2d] focus:border-none h-14 bg-[image:--select-button-svg] placeholder:text-[#a7baa0] p-4 text-base font-normal leading-normal">
+          <option value="one"></option>
+          <option value="two">two</option>
+          <option value="three">three</option>
+        </select>
+      </label>
+    </div>
+    <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+      <label class="flex flex-col min-w-40 flex-1">
+        <input placeholder="Amount"
+          class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-white focus:outline-0 focus:ring-0 border-none bg-[#313e2d] focus:border-none h-14 placeholder:text-[#a7baa0] p-4 text-base font-normal leading-normal"
+          value="" />
+      </label>
+    </div>
+    <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+      <label class="flex flex-col min-w-40 flex-1">
+        <input placeholder="Description"
+          class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-white focus:outline-0 focus:ring-0 border-none bg-[#313e2d] focus:border-none h-14 placeholder:text-[#a7baa0] p-4 text-base font-normal leading-normal"
+          value="" />
+      </label>
+    </div>
+    <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+      <label class="flex flex-col min-w-40 flex-1">
+        <select
+          class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-white focus:outline-0 focus:ring-0 border-none bg-[#313e2d] focus:border-none h-14 bg-[image:--select-button-svg] placeholder:text-[#a7baa0] p-4 text-base font-normal leading-normal">
+          <option value="one"></option>
+          <option value="two">two</option>
+          <option value="three">three</option>
+        </select>
+      </label>
+    </div>
+    <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+      <label class="flex flex-col min-w-40 flex-1">
+        <select
+          class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-white focus:outline-0 focus:ring-0 border-none bg-[#313e2d] focus:border-none h-14 bg-[image:--select-button-svg] placeholder:text-[#a7baa0] p-4 text-base font-normal leading-normal">
+          <option value="one"></option>
+          <option value="two">two</option>
+          <option value="three">three</option>
+        </select>
+      </label>
+    </div>
+    <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+      <label class="flex flex-col min-w-40 flex-1">
+        <input placeholder="Date"
+          class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-white focus:outline-0 focus:ring-0 border-none bg-[#313e2d] focus:border-none h-14 placeholder:text-[#a7baa0] p-4 text-base font-normal leading-normal"
+          value="" />
+      </label>
+    </div>
+    <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+      <label class="flex flex-col min-w-40 flex-1">
+        <textarea placeholder="Notes"
+          class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-white focus:outline-0 focus:ring-0 border-none bg-[#313e2d] focus:border-none min-h-36 placeholder:text-[#a7baa0] p-4 text-base font-normal leading-normal"></textarea>
+      </label>
+    </div>
+    <div class="flex px-4 py-3">
+      <button
+        class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-12 px-5 flex-1 bg-[#c1e0b7] text-[#171e15] text-base font-bold leading-normal tracking-[0.015em]">
+        <span class="truncate">Add Transaction</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+
+
+{% endblock %}

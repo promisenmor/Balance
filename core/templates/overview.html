@@ -1,0 +1,172 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="px-40 flex flex-1 justify-center py-5">
+    <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+        <div class="flex flex-wrap justify-between gap-3 p-4">
+            <p class="text-white tracking-light text-[32px] font-bold leading-tight min-w-72">Your Financial Overview
+            </p>
+        </div>
+        <div class="flex flex-wrap gap-4 p-4">
+            <div class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-xl p-6 bg-[#313e2d]">
+                <p class="text-white text-base font-medium leading-normal">Total Balance</p>
+                <p class="text-white tracking-light text-2xl font-bold leading-tight">₦1,250,000</p>
+            </div>
+        </div>
+        <div class="flex flex-col gap-3 p-4">
+            <div class="flex gap-6 justify-between">
+                <p class="text-white text-base font-medium leading-normal">Weekly Spending</p>
+                <p class="text-white text-sm font-normal leading-normal">60%</p>
+            </div>
+            <div class="rounded bg-[#465940]">
+                <div class="h-2 rounded bg-[#c1e0b7]" style="width: 60%;"></div>
+            </div>
+            <p class="text-[#a7baa0] text-sm font-normal leading-normal">₦60,000 / ₦100,000</p>
+        </div>
+        <div class="flex flex-col gap-3 p-4">
+            <div class="flex gap-6 justify-between">
+                <p class="text-white text-base font-medium leading-normal">Monthly Spending</p>
+                <p class="text-white text-sm font-normal leading-normal">80%</p>
+            </div>
+            <div class="rounded bg-[#465940]">
+                <div class="h-2 rounded bg-[#c1e0b7]" style="width: 80%;"></div>
+            </div>
+            <p class="text-[#a7baa0] text-sm font-normal leading-normal">₦400,000 / ₦500,000</p>
+        </div>
+        <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Savings Goals</h2>
+        <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
+            <div class="flex flex-col gap-3 pb-3">
+                <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCtqF8SFwzrsIl7RJFSkeKbPKLnQEm58LgzchSuLf14fnqdOwnj6KkqTzhGKlvkTekB0GdI5v9NUTbM8emdTbdTwdaSMfepo8gWeD8Luv60-ziyzWNWJ7ahPfO19nnq8iRtdYp6dRqP4Nd_zz36we2UyM8NQLXTh4EyZSmkIC9rEBKxR91HX09Kez8TPwaA1c5O1P72zat3aOGByYIXwt5rMOleK2Dql0MV82NGEbzYLOXo4113ObeVL_PgL03X5wG6I4DR_WD4Ohr1");'>
+                </div>
+                <div>
+                    <p class="text-white text-base font-medium leading-normal">Vacation Fund</p>
+                    <p class="text-[#a7baa0] text-sm font-normal leading-normal">₦250,000 / ₦500,000</p>
+                </div>
+            </div>
+            <div class="flex flex-col gap-3 pb-3">
+                <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDqR2B2FguTTzsdGloPCGVULNF1F-Auwq9BLR9VIZ2U8FKdcFc2ZCSFbOJldmmMw-M-xNl7qrvrq2wRoU9t6rk_C7CinGfsZmzAxYqynWAYD7r1TWA6ajWTZSUwQ515E8bnou17DpoEtKyZb83DUx-5fVbG67wIfFzqzUikR9K7nJUBiEpgOqKQuomaGpcnegyPGdqxhoyAsL6Ac8A67qa32rmcT6u6wg8GwEKaB34bqh7AgJ3VkHWhVz6G3j03a_EOEQzBhmmoOsbs");'>
+                </div>
+                <div>
+                    <p class="text-white text-base font-medium leading-normal">New Car Savings</p>
+                    <p class="text-[#a7baa0] text-sm font-normal leading-normal">₦100,000 / ₦200,000</p>
+                </div>
+            </div>
+        </div>
+        <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Recent
+            Transactions</h2>
+        <div class="flex items-center gap-4 bg-[#171e15] px-4 min-h-[72px] py-2 justify-between">
+            <div class="flex items-center gap-4">
+                <div class="text-white flex items-center justify-center rounded-lg bg-[#313e2d] shrink-0 size-12"
+                    data-icon="ShoppingCart" data-size="24px" data-weight="regular">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor"
+                        viewBox="0 0 256 256">
+                        <path
+                            d="M222.14,58.87A8,8,0,0,0,216,56H54.68L49.79,29.14A16,16,0,0,0,34.05,16H16a8,8,0,0,0,0,16h18L59.56,172.29a24,24,0,0,0,5.33,11.27,28,28,0,1,0,44.4,8.44h45.42A27.75,27.75,0,0,0,152,204a28,28,0,1,0,28-28H83.17a8,8,0,0,1-7.87-6.57L72.13,152h116a24,24,0,0,0,23.61-19.71l12.16-66.86A8,8,0,0,0,222.14,58.87ZM96,204a12,12,0,1,1-12-12A12,12,0,0,1,96,204Zm96,0a12,12,0,1,1-12-12A12,12,0,0,1,192,204Zm4-74.57A8,8,0,0,1,188.1,136H69.22L57.59,72H206.41Z">
+                        </path>
+                    </svg>
+                </div>
+                <div class="flex flex-col justify-center">
+                    <p class="text-white text-base font-medium leading-normal line-clamp-1">Shoprite</p>
+                    <p class="text-[#a7baa0] text-sm font-normal leading-normal line-clamp-2">Grocery</p>
+                </div>
+            </div>
+            <div class="shrink-0">
+                <p class="text-white text-base font-normal leading-normal">-₦15,000</p>
+            </div>
+        </div>
+        <div class="flex items-center gap-4 bg-[#171e15] px-4 min-h-[72px] py-2 justify-between">
+            <div class="flex items-center gap-4">
+                <div class="text-white flex items-center justify-center rounded-lg bg-[#313e2d] shrink-0 size-12"
+                    data-icon="CurrencyNgn" data-size="24px" data-weight="regular">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor"
+                        viewBox="0 0 256 256">
+                        <path
+                            d="M216,136H200V120h16a8,8,0,0,0,0-16H200V46a8,8,0,0,0-16,0v58H119.42L70.31,41.08A8,8,0,0,0,56,46v58H40a8,8,0,0,0,0,16H56v16H40a8,8,0,0,0,0,16H56v58a8,8,0,0,0,16,0V152h64.58l49.11,62.92A8,8,0,0,0,192,218a7.8,7.8,0,0,0,2.6-.44A8,8,0,0,0,200,210V152h16a8,8,0,0,0,0-16Zm-32-16v16H144.39L131.9,120ZM72,69.25,99.12,104H72ZM72,136V120h39.61l12.49,16Zm112,50.75L156.88,152H184Z">
+                        </path>
+                    </svg>
+                </div>
+                <div class="flex flex-col justify-center">
+                    <p class="text-white text-base font-medium leading-normal line-clamp-1">Tech Solutions Inc.</p>
+                    <p class="text-[#a7baa0] text-sm font-normal leading-normal line-clamp-2">Salary</p>
+                </div>
+            </div>
+            <div class="shrink-0">
+                <p class="text-white text-base font-normal leading-normal">+₦200,000</p>
+            </div>
+        </div>
+        <div class="flex items-center gap-4 bg-[#171e15] px-4 min-h-[72px] py-2 justify-between">
+            <div class="flex items-center gap-4">
+                <div class="text-white flex items-center justify-center rounded-lg bg-[#313e2d] shrink-0 size-12"
+                    data-icon="Receipt" data-size="24px" data-weight="regular">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor"
+                        viewBox="0 0 256 256">
+                        <path
+                            d="M72,104a8,8,0,0,1,8-8h96a8,8,0,0,1,0,16H80A8,8,0,0,1,72,104Zm8,40h96a8,8,0,0,0,0-16H80a8,8,0,0,0,0,16ZM232,56V208a8,8,0,0,1-11.58,7.15L192,200.94l-28.42,14.21a8,8,0,0,1-7.16,0L128,200.94,99.58,215.15a8,8,0,0,1-7.16,0L64,200.94,35.58,215.15A8,8,0,0,1,24,208V56A16,16,0,0,1,40,40H216A16,16,0,0,1,232,56Zm-16,0H40V195.06l20.42-10.22a8,8,0,0,1,7.16,0L96,199.06l28.42-14.22a8,8,0,0,1,7.16,0L160,199.06l28.42-14.22a8,8,0,0,1,7.16,0L216,195.06Z">
+                        </path>
+                    </svg>
+                </div>
+                <div class="flex flex-col justify-center">
+                    <p class="text-white text-base font-medium leading-normal line-clamp-1">Electricity Bill</p>
+                    <p class="text-[#a7baa0] text-sm font-normal leading-normal line-clamp-2">Utilities</p>
+                </div>
+            </div>
+            <div class="shrink-0">
+                <p class="text-white text-base font-normal leading-normal">-₦10,000</p>
+            </div>
+        </div>
+        <div class="flex items-center gap-4 bg-[#171e15] px-4 min-h-[72px] py-2 justify-between">
+            <div class="flex items-center gap-4">
+                <div class="text-white flex items-center justify-center rounded-lg bg-[#313e2d] shrink-0 size-12"
+                    data-icon="ForkKnife" data-size="24px" data-weight="regular">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor"
+                        viewBox="0 0 256 256">
+                        <path
+                            d="M72,88V40a8,8,0,0,1,16,0V88a8,8,0,0,1-16,0ZM216,40V224a8,8,0,0,1-16,0V176H152a8,8,0,0,1-8-8,268.75,268.75,0,0,1,7.22-56.88c9.78-40.49,28.32-67.63,53.63-78.47A8,8,0,0,1,216,40ZM200,53.9c-32.17,24.57-38.47,84.42-39.7,106.1H200ZM119.89,38.69a8,8,0,1,0-15.78,2.63L112,88.63a32,32,0,0,1-64,0l7.88-47.31a8,8,0,1,0-15.78-2.63l-8,48A8.17,8.17,0,0,0,32,88a48.07,48.07,0,0,0,40,47.32V224a8,8,0,0,0,16,0V135.32A48.07,48.07,0,0,0,128,88a8.17,8.17,0,0,0-.11-1.31Z">
+                        </path>
+                    </svg>
+                </div>
+                <div class="flex flex-col justify-center">
+                    <p class="text-white text-base font-medium leading-normal line-clamp-1">Local Restaurant</p>
+                    <p class="text-[#a7baa0] text-sm font-normal leading-normal line-clamp-2">Dining</p>
+                </div>
+            </div>
+            <div class="shrink-0">
+                <p class="text-white text-base font-normal leading-normal">-₦5,000</p>
+            </div>
+        </div>
+        <div class="flex items-center gap-4 bg-[#171e15] px-4 min-h-[72px] py-2 justify-between">
+            <div class="flex items-center gap-4">
+                <div class="text-white flex items-center justify-center rounded-lg bg-[#313e2d] shrink-0 size-12"
+                    data-icon="Car" data-size="24px" data-weight="regular">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor"
+                        viewBox="0 0 256 256">
+                        <path
+                            d="M240,112H229.2L201.42,49.5A16,16,0,0,0,186.8,40H69.2a16,16,0,0,0-14.62,9.5L26.8,112H16a8,8,0,0,0,0,16h8v80a16,16,0,0,0,16,16H64a16,16,0,0,0,16-16V192h96v16a16,16,0,0,0,16,16h24a16,16,0,0,0,16-16V128h8a8,8,0,0,0,0-16ZM69.2,56H186.8l24.89,56H44.31ZM64,208H40V192H64Zm128,0V192h24v16Zm24-32H40V128H216ZM56,152a8,8,0,0,1,8-8H80a8,8,0,0,1,0,16H64A8,8,0,0,1,56,152Zm112,0a8,8,0,0,1,8-8h16a8,8,0,0,1,0,16H176A8,8,0,0,1,168,152Z">
+                        </path>
+                    </svg>
+                </div>
+                <div class="flex flex-col justify-center">
+                    <p class="text-white text-base font-medium leading-normal line-clamp-1">Ride-hailing Service</p>
+                    <p class="text-[#a7baa0] text-sm font-normal leading-normal line-clamp-2">Transportation</p>
+                </div>
+            </div>
+            <div class="shrink-0">
+                <p class="text-white text-base font-normal leading-normal">-₦2,500</p>
+            </div>
+        </div>
+        <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Balance Score</h2>
+        <div class="flex flex-wrap gap-4 p-4">
+            <div class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-xl p-6 bg-[#313e2d]">
+                <p class="text-white text-base font-medium leading-normal">Score</p>
+                <p class="text-white tracking-light text-2xl font-bold leading-tight">85/100</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}

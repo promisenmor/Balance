@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="px-40 flex flex-1 justify-center py-5">
+    <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+        <div class="flex flex-wrap justify-between gap-3 p-4">
+            <p class="text-white tracking-light text-[32px] font-bold leading-tight min-w-72">Overview</p>
+        </div>
+        <div class="flex px-4 py-3">
+            <div class="flex h-10 flex-1 items-center justify-center rounded-full bg-[#313e2d] p-1">
+                <label
+                    class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-full px-2 has-[:checked]:bg-[#171e15] has-[:checked]:shadow-[0_0_4px_rgba(0,0,0,0.1)] has-[:checked]:text-white text-[#a7baa0] text-sm font-medium leading-normal">
+                    <span class="truncate">Weekly</span>
+                    <input type="radio" name="f7d4bbab-8f99-4aa9-b99e-a2ea0d2a7bf9" class="invisible w-0"
+                        value="Weekly" />
+                </label>
+                <label
+                    class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-full px-2 has-[:checked]:bg-[#171e15] has-[:checked]:shadow-[0_0_4px_rgba(0,0,0,0.1)] has-[:checked]:text-white text-[#a7baa0] text-sm font-medium leading-normal">
+                    <span class="truncate">Monthly</span>
+                    <input type="radio" name="f7d4bbab-8f99-4aa9-b99e-a2ea0d2a7bf9" class="invisible w-0"
+                        value="Monthly" checked="" />
+                </label>
+            </div>
+        </div>
+        <div class="flex flex-wrap gap-4 px-4 py-6">
+            <div class="flex min-w-72 flex-1 flex-col gap-2 rounded-xl border border-[#465940] p-6">
+                <p class="text-white text-base font-medium leading-normal">Spending Breakdown</p>
+                <p class="text-white tracking-light text-[32px] font-bold leading-tight truncate">₦150,000</p>
+                <div class="flex gap-1">
+                    <p class="text-[#a7baa0] text-base font-normal leading-normal">This Month</p>
+                    <p class="text-[#0bda35] text-base font-medium leading-normal">+10%</p>
+                </div>
+                <div
+                    class="grid min-h-[180px] grid-flow-col gap-6 grid-rows-[1fr_auto] items-end justify-items-center px-3">
+                    <div class="border-[#a7baa0] bg-[#313e2d] border-t-2 w-full" style="height: 80%;"></div>
+                    <p class="text-[#a7baa0] text-[13px] font-bold leading-normal tracking-[0.015em]">Food</p>
+                    <div class="border-[#a7baa0] bg-[#313e2d] border-t-2 w-full" style="height: 50%;"></div>
+                    <p class="text-[#a7baa0] text-[13px] font-bold leading-normal tracking-[0.015em]">Transport</p>
+                    <div class="border-[#a7baa0] bg-[#313e2d] border-t-2 w-full" style="height: 50%;"></div>
+                    <p class="text-[#a7baa0] text-[13px] font-bold leading-normal tracking-[0.015em]">Data</p>
+                    <div class="border-[#a7baa0] bg-[#313e2d] border-t-2 w-full" style="height: 90%;"></div>
+                    <p class="text-[#a7baa0] text-[13px] font-bold leading-normal tracking-[0.015em]">Entertainment</p>
+                    <div class="border-[#a7baa0] bg-[#313e2d] border-t-2 w-full" style="height: 70%;"></div>
+                    <p class="text-[#a7baa0] text-[13px] font-bold leading-normal tracking-[0.015em]">Utilities</p>
+                    <div class="border-[#a7baa0] bg-[#313e2d] border-t-2 w-full" style="height: 60%;"></div>
+                    <p class="text-[#a7baa0] text-[13px] font-bold leading-normal tracking-[0.015em]">Other</p>
+                </div>
+            </div>
+        </div>
+        <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Insights</h2>
+        <div class="flex items-center gap-4 bg-[#171e15] px-4 min-h-[72px] py-2">
+            <div class="text-white flex items-center justify-center rounded-lg bg-[#313e2d] shrink-0 size-12"
+                data-icon="Lightbulb" data-size="24px" data-weight="regular">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor"
+                    viewBox="0 0 256 256">
+                    <path
+                        d="M176,232a8,8,0,0,1-8,8H88a8,8,0,0,1,0-16h80A8,8,0,0,1,176,232Zm40-128a87.55,87.55,0,0,1-33.64,69.21A16.24,16.24,0,0,0,176,186v6a16,16,0,0,1-16,16H96a16,16,0,0,1-16-16v-6a16,16,0,0,0-6.23-12.66A87.59,87.59,0,0,1,40,104.49C39.74,56.83,78.26,17.14,125.88,16A88,88,0,0,1,216,104Zm-16,0a72,72,0,0,0-73.74-72c-39,.92-70.47,33.39-70.26,72.39a71.65,71.65,0,0,0,27.64,56.3A32,32,0,0,1,96,186v6h64v-6a32.15,32.15,0,0,1,12.47-25.35A71.65,71.65,0,0,0,200,104Zm-16.11-9.34a57.6,57.6,0,0,0-46.56-46.55,8,8,0,0,0-2.66,15.78c16.57,2.79,30.63,16.85,33.44,33.45A8,8,0,0,0,176,104a9,9,0,0,0,1.35-.11A8,8,0,0,0,183.89,94.66Z">
+                    </path>
+                </svg>
+            </div>
+            <div class="flex flex-col justify-center">
+                <p class="text-white text-base font-medium leading-normal line-clamp-1">Smart Tip</p>
+                <p class="text-[#a7baa0] text-sm font-normal leading-normal line-clamp-2">You spent 20% more on data
+                    this month</p>
+            </div>
+        </div>
+        <div class="flex items-center gap-4 bg-[#171e15] px-4 min-h-[72px] py-2">
+            <div class="text-white flex items-center justify-center rounded-lg bg-[#313e2d] shrink-0 size-12"
+                data-icon="Users" data-size="24px" data-weight="regular">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor"
+                    viewBox="0 0 256 256">
+                    <path
+                        d="M117.25,157.92a60,60,0,1,0-66.5,0A95.83,95.83,0,0,0,3.53,195.63a8,8,0,1,0,13.4,8.74,80,80,0,0,1,134.14,0,8,8,0,0,0,13.4-8.74A95.83,95.83,0,0,0,117.25,157.92ZM40,108a44,44,0,1,1,44,44A44.05,44.05,0,0,1,40,108Zm210.14,98.7a8,8,0,0,1-11.07-2.33A79.83,79.83,0,0,0,172,168a8,8,0,0,1,0-16,44,44,0,1,0-16.34-84.87,8,8,0,1,1-5.94-14.85,60,60,0,0,1,55.53,105.64,95.83,95.83,0,0,1,47.22,37.71A8,8,0,0,1,250.14,206.7Z">
+                    </path>
+                </svg>
+            </div>
+            <div class="flex flex-col justify-center">
+                <p class="text-white text-base font-medium leading-normal line-clamp-1">Comparison</p>
+                <p class="text-[#a7baa0] text-sm font-normal leading-normal line-clamp-2">Nigerians in your age group
+                    save ₦12,000/mo</p>
+            </div>
+        </div>
+        <div class="flex items-center gap-4 bg-[#171e15] px-4 min-h-[72px] py-2">
+            <div class="text-white flex items-center justify-center rounded-lg bg-[#313e2d] shrink-0 size-12"
+                data-icon="Bus" data-size="24px" data-weight="regular">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor"
+                    viewBox="0 0 256 256">
+                    <path
+                        d="M184,32H72A32,32,0,0,0,40,64V208a16,16,0,0,0,16,16H80a16,16,0,0,0,16-16V192h64v16a16,16,0,0,0,16,16h24a16,16,0,0,0,16-16V64A32,32,0,0,0,184,32ZM56,176V120H200v56Zm0-96H200v24H56ZM72,48H184a16,16,0,0,1,16,16H56A16,16,0,0,1,72,48Zm8,160H56V192H80Zm96,0V192h24v16Zm-72-60a12,12,0,1,1-12-12A12,12,0,0,1,104,148Zm72,0a12,12,0,1,1-12-12A12,12,0,0,1,176,148Zm72-68v24a8,8,0,0,1-16,0V80a8,8,0,0,1,16,0ZM24,80v24a8,8,0,0,1-16,0V80a8,8,0,0,1,16,0Z">
+                    </path>
+                </svg>
+            </div>
+            <div class="flex flex-col justify-center">
+                <p class="text-white text-base font-medium leading-normal line-clamp-1">Local Culture Stat</p>
+                <p class="text-[#a7baa0] text-sm font-normal leading-normal line-clamp-2">Your danfo spending is 12%
+                    above average</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
