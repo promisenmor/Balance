@@ -44,3 +44,51 @@ function getCookie(name) {
     }
     return cookieValue;
 }
+
+
+
+import { refreshToken, getAuthHeaders } from './auth.js';
+
+// Intercept all fetch requests
+const originalFetch = window.fetch;
+window.fetch = async function(url, options = {}) {
+    // Add auth headers if token exists
+    const token = localStorage.getItem('access_token');
+    if (token && !url.includes('/auth/')) {
+        options.headers = {
+            ...options.headers,
+            'Authorization': `Bearer ${token}`
+        };
+    }
+    
+    const response = await originalFetch(url, options);
+    
+    // If 401, try to refresh token and retry
+    if (response.status === 401 && token) {
+        const refreshed = await refreshToken();
+        if (refreshed) {
+            const newToken = localStorage.getItem('access_token');
+            options.headers = {
+                ...options.headers,
+                'Authorization': `Bearer ${newToken}`
+            };
+            return originalFetch(url, options);
+        }
+    }
+    
+    return response;
+};
+
+// Check auth state on page load
+document.addEventListener('DOMContentLoaded', function() {
+    const protectedPaths = ['/dashboard/', '/transactions/', '/goals/', '/advisor/'];
+    const currentPath = window.location.pathname;
+    
+    if (protectedPaths.includes(currentPath) && !localStorage.getItem('access_token')) {
+        window.location.href = '/login/';
+    }
+    
+    if ((currentPath === '/login/' || currentPath === '/register/') && localStorage.getItem('access_token')) {
+        window.location.href = '/dashboard/';
+    }
+});
