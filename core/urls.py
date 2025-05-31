@@ -17,10 +17,14 @@ urlpatterns = [
     path('transactions/', views.transactions, name='transactions'),
     path('saving_goals/', views.saving_goals, name='saving_goals'),
     path('advisor/', views.advisor, name='advisor'),
+    path('login/', views.login_view, name='login'),
+    path('register/', views.register_view, name='register'),
+    path('logout/', views.logout_view, name='logout'),
 
-    path('register/', RegisterView.as_view(), name='auth_register'),
-    path('login/', LoginView.as_view(), name='auth_login'),
-    path('logout/', LogoutView.as_view(), name='auth_logout'),
+
+    path('api/auth/register/', RegisterView.as_view(), name='auth_register'),
+    path('api/auth/login/', LoginView.as_view(), name='auth_login'),
+    path('api/auth/logout/', LogoutView.as_view(), name='auth_logout'),
 
     path('api/', include(router.urls)),
 ]
