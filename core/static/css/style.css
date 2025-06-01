@@ -1,0 +1,15 @@
+/* Ensure proper spacing */
+nav {
+  position: relative;
+  z-index: 50;
+}
+
+/* Mobile menu styles (if needed) */
+@media (max-width: 768px) {
+  .mobile-menu {
+    display: none;
+  }
+  .mobile-menu.active {
+    display: block;
+  }
+}

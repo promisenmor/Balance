@@ -33,6 +33,7 @@
                         <h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">Balance</h2>
                     </a>
                 </div>
+                {% if user.is_authenticated %}
                 <div class="flex flex-1 justify-end gap-8">
                     <div class="flex items-center gap-9">
                         <a class="text-white text-sm font-medium leading-normal"
@@ -43,6 +44,7 @@
                         <a class="text-white text-sm font-medium leading-normal"
                             href="{% url 'saving_goals' %}">Goals</a>
                     </div>
+                {% endif %}
                     <button
                         class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 bg-[#313e2d] text-white gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5">
                         <div class="text-white" data-icon="Bell" data-size="20px" data-weight="regular">
