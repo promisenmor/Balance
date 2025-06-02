@@ -1,0 +1,47 @@
+{% load static %}
+<html>
+
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link rel="stylesheet" as="style" onload="this.rel='stylesheet'"
+        href="https://fonts.googleapis.com/css2?display=swap&amp;family=Lexend%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" />
+
+    <title>Balancce</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+</head>
+
+<body>
+{% if user.is_authenticated %}
+
+               
+                    <a href="{% url 'dashboard' %}" class="hover:text-blue-200 transition-colors">
+                        <h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">Balance</h2>
+                    </a>
+                </div>
+                <div class="flex flex-1 justify-end gap-8">
+                    <div class="flex items-center gap-9">
+                        <a class="text-white text-sm font-medium leading-normal"
+                            href="{% url 'overview' %}">Overview</a>
+                        <a class="text-white text-sm font-medium leading-normal"
+                            href="{% url 'transactions' %}">Transactions</a>
+                        <a class="text-white text-sm font-medium leading-normal" href="{% url 'advisor' %}">Budget</a>
+                        <a class="text-white text-sm font-medium leading-normal"
+                            href="{% url 'saving_goals' %}">Goals</a>
+                    </div>
+{% endif %}
+                    <button
+                        class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 bg-[#313e2d] text-white gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5">
+                       
+                        </div>
+                    </button>
+                </div>
+            </header>
+            <main>
+                {% block content %}
+
+                {% endblock %}
+            </main>
+        </div>
+    </div>
